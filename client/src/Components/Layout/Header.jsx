@@ -65,6 +65,7 @@ const Header = () => {
 export default Header;
 
 /*
+Disabled Part -
 <li className="nav-item">
   <NavLink to="/" className="nav-link disabled">
     Disabled

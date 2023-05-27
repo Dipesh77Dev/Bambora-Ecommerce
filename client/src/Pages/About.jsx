@@ -4,7 +4,8 @@ import Layout from "./../Components/Layout/Layout";
 const About = () => {
   return (
     <>
-      <Layout title={"About us - Ecommer app"}>
+      {/* Normal Layout - <Layout> */}
+      <Layout title={"About us"}>
         <div className="row contactus ">
           <div className="col-md-6 ">
             <img

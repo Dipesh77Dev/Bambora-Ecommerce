@@ -6,6 +6,7 @@ import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Policy from "./Pages/Policy";
 import PageNotFound from "./Pages/PageNotFound";
+import Register from "./Pages/Auth/Register";
 
 function App() {
   return (
@@ -15,8 +16,8 @@ function App() {
         <Route exact path = "/about" element = {<About />} />
         <Route exact path = "/contact" element = {<Contact />} />
         <Route exact path = "/policy" element = {<Policy />} />
-        {/* * - means if no existing routes found it will show this page... */}
-        <Route exact path = "/*" element = {<PageNotFound />} /> 
+        <Route exact path = "/register" element = {<Register />} />
+        <Route exact path = "/*" element = {<PageNotFound />} />
       </Routes>
     </>
   );
@@ -27,6 +28,7 @@ export default App;
 
 
 /*
+try purpose -
 function App() {
   return (
     <>
@@ -37,4 +39,6 @@ function App() {
     </>
   );
 }
+
+* - means if no existing routes found it will show this page...
 */

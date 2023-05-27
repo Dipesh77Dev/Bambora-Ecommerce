@@ -50,6 +50,7 @@ code {
   letter-spacing: 3px;
 }
 
+
 /* Footer.jsx */
 .footer {
   color: white !important;
@@ -69,6 +70,7 @@ code {
   color: #ffefba;
   border-bottom: 1px solid #ffefba;
 }
+
 
 /* PageNotFound.jsx */
 .pnf {
@@ -111,3 +113,12 @@ code {
   justify-content: center;
 }
 
+
+/* Register.jsx */
+.register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  flex-direction: column;
+}
