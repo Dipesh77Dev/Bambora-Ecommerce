@@ -1,5 +1,4 @@
-import "./App.css";
-import Layout from "./Components/Layout/Layout.jsx";
+// import Layout from "./Components/Layout/Layout.jsx";
 import {Routes, Route} from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import About from "./Pages/About";
@@ -7,6 +6,7 @@ import Contact from "./Pages/Contact";
 import Policy from "./Pages/Policy";
 import PageNotFound from "./Pages/PageNotFound";
 import Register from "./Pages/Auth/Register";
+import Login from "./Pages/Auth/Login";
 
 function App() {
   return (
@@ -17,6 +17,7 @@ function App() {
         <Route exact path = "/contact" element = {<Contact />} />
         <Route exact path = "/policy" element = {<Policy />} />
         <Route exact path = "/register" element = {<Register />} />
+        <Route exact path = "/login" element = {<Login />} />
         <Route exact path = "/*" element = {<PageNotFound />} />
       </Routes>
     </>

@@ -4,6 +4,7 @@ import colors from "colors";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import connectDB from "./config/db.js";
+import cors from "cors";
 import authRoutes from "./routes/authRoutes.js";
 
 // configure env
@@ -17,6 +18,7 @@ connectDB();
 const app = express();
 
 // middlewares (express.json => should be used before, using any api while we are dealing with json data...)
+app.use(cors());
 app.use(express.json()); // We can use bodyparser also but this is an inbuild functn...
 app.use(morgan("dev"));
 
