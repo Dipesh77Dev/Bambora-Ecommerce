@@ -3,10 +3,13 @@ import Layout from "./../../Components/Layout/Layout";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { useAuth } from "../../Context/auth";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const [auth, setAuth] = useAuth();
 
   const navigate = useNavigate();
 
@@ -20,13 +23,21 @@ const Login = () => {
       });
       if (res && res.data.success) {
         toast.success(res.data && res.data.message);
+        setAuth({
+          ...auth,
+          user: res.data.user,
+          token: res.data.token,
+        });
+        localStorage.setItem("auth", JSON.stringify(res.data)); // JSON data doesnt support localstorage, so we need to convert it into strings..
         navigate("/");
       } else {
         toast.error(res.data.message);
       }
     } catch (error) {
       console.log(error);
-      toast.error("Something went wrong.. Plz login with correct credentials!! to visit our website..");
+      toast.error(
+        "Something went wrong.. Plz login with correct credentials!! to visit our website.."
+      );
     }
   };
   return (
