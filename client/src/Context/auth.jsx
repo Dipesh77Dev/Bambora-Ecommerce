@@ -8,7 +8,7 @@ const AuthProvider = ({ children }) => {
     token: "",
   });
 
-  //default axios
+  //default axios - We can use this in Routes>Private.jsx
   axios.defaults.headers.common["Authorization"] = auth?.token;
 
   // to see data when we refresh also...
