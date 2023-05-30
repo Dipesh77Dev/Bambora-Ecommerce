@@ -9,6 +9,7 @@ import Register from "./Pages/Auth/Register";
 import Login from "./Pages/Auth/Login";
 import Dashboard from "./Pages/Users/Dashboard";
 import PrivateRoute from "./Components/Routes/PrivateRoute";
+import ForgotPasssword from "./Pages/Auth/ForgotPassword";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="" element={<Dashboard />} />
         </Route>
         {/* <Route exact path = "/dashboard" element = {<Dashboard />} /> */}
+        <Route exact path="/forgot-password" element={<ForgotPasssword />} />
         <Route exact path="/*" element={<PageNotFound />} />
       </Routes>
     </>

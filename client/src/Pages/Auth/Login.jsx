@@ -12,7 +12,7 @@ const Login = () => {
   const [auth, setAuth] = useAuth();
 
   const navigate = useNavigate();
-  const location = useLocation(); 
+  const location = useLocation();
 
   // form function
   const handleSubmit = async (e) => {
@@ -38,7 +38,7 @@ const Login = () => {
     } catch (error) {
       console.log(error);
       toast.error(
-        "Something went wrong.. Plz login with correct credentials!! to visit our website.."
+        "Something went wrong.. Plz login with correct credentials which is given while registering!! to visit our website.."
       );
     }
   };
@@ -74,9 +74,22 @@ const Login = () => {
             />
           </div>
 
+          <div className="mb-3">
+            <button
+              type="submit"
+              className="btn btn-primary"
+              onClick={() => {
+                navigate("/forgot-password");
+              }}
+            >
+              Forgot Password
+            </button>
+          </div>
+
           <button type="submit" className="btn btn-primary">
             LOGIN
           </button>
+          
         </form>
       </div>
     </Layout>

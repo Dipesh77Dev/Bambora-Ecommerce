@@ -11,6 +11,8 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
+  const [answer, setAnswer] = useState("");
+
   const navigate = useNavigate(); // - We had to make variable bcoz it is hook.
 
   // form functn
@@ -23,6 +25,7 @@ const Register = () => {
         password,
         phone,
         address,
+        answer,
       });
       if (res.data.success) {
         toast.success(res.data.message);
@@ -107,6 +110,19 @@ const Register = () => {
                 required
               />
             </div>
+
+            <div className="mb-3">
+            <input
+              type="text"
+              className="form-control"
+              id="answer"
+              value={answer}
+              onChange={(e) => setAnswer(e.target.value)}
+              placeholder="What is Your Favorite sports"
+              autoComplete="off"
+              required
+            />
+          </div>
 
             <button type="submit" className="btn btn-primary">
               Register
